@@ -1,4 +1,10 @@
 .product-wrapper{
-    padding:3rem 8rem;
+    padding:3rem ;
 }
 
+.cards-container{
+    display:flex;
+    justify-content: start;
+    padding:5rem 0 0 0;
+    flex-wrap: wrap;
+}
