@@ -4,6 +4,9 @@
     align-items: center;
     padding:1rem 3rem;
 }
+.nav-heading{
+    text-decoration: none;
+}
 
 .logo-icon{
     width:2rem;
