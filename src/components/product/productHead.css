@@ -1,0 +1,31 @@
+.header-wrapper {
+  text-align: center;
+}
+.header-wrapper > h1 {
+  padding-bottom: 2rem;
+}
+.border-line {
+  position: relative;
+  margin: 0 auto;
+}
+.border-line {
+  width: 10rem;
+  height: 1px;
+  background-color: var(--color-primary);
+}
+.white-bg-wrapper {
+  background-color: var(--color-light);
+  position: absolute;
+  left: 40%;
+  top: -15px;
+  width: 2.5rem;
+  margin: 0 auto;
+}
+.icon-wrapper {
+  background-color: var(--color-primary-50);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  padding-top: 0.19rem;
+  margin-left: 4px;
+}

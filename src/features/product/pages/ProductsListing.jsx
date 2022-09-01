@@ -1,7 +1,13 @@
-import React from 'react'
+import "./product.css"
+import { ProductHeading } from '../../../components'
 
 export const ProductsListing = () => {
   return (
-    <div>ProductsListing</div>
+   <main className="product-wrapper">
+       <ProductHeading />
+       <ul>
+           
+       </ul>
+   </main>
   )
 }

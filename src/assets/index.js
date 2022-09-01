@@ -1,1 +1,2 @@
-export * from "./icons/Cart"
+export * from "./icons/CartIcon"
+export * from "./icons/StarIcon"
