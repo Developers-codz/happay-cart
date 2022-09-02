@@ -3,6 +3,10 @@
   justify-content: center;
   align-items: center;
 }
+.distributed{
+  display: flex;
+  justify-content: space-around;
+}
 .pointer{
   cursor:pointer;
 }
@@ -10,4 +14,7 @@
   -webkit-box-shadow: 0px 10px 10px -12px rgba(158, 145, 145, 0.75);
   -moz-box-shadow: 0px 10px 10px -12px rgba(158, 145, 145, 0.75);
   box-shadow: 0px 10px 10px -12px rgba(158, 145, 145, 0.75);
+}
+.decor-none{
+  list-style: none;
 }
