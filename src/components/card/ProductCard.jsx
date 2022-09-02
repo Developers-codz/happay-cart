@@ -29,7 +29,7 @@ export const ProductCard = ({ item }) => {
         </div>
       </div>
       <div className="card-desc">{item.description}</div>
-     {getCurrentItem(item)?.qty > 0 ?<QtyButton props={"product"} /> : <button
+     {getCurrentItem(item)?.qty > 0 ?<QtyButton props={"product"} item={getCurrentItem(item)} /> : <button
         className="card-btn"
         onClick={() => dispatch(addToCartHandler({ ...item, qty: 1 }))}
       >

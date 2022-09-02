@@ -2,8 +2,10 @@ import React from "react";
 import "./cart.css";
 import { Link } from "react-router-dom";
 import { QtyButton } from "../../../components";
+import { useSelector } from "react-redux";
 
 export const Cart = () => {
+  const {cart} = useSelector(store => store.cart)
   return (
     <main className="cart-container">
       <Link to="/" className="home-link">
@@ -18,11 +20,13 @@ export const Cart = () => {
             <div className="qty-head">QTY</div>
           </div>
           <ul>
-            <li className="decor-none distributed cart-product-card">
-              <div className="sno">1</div>
-              <div className="product-name">Food Cart</div>
-              <QtyButton />
+           {cart.map(item =>  (
+              <li className="decor-none distributed cart-product-card" key={item.id}>
+              <div className="sno">{item.id}</div>
+              <div className="product-name">{item.name}</div>
+              <QtyButton item={item} />
             </li>
+           ))}
           </ul>
         </div>
         <div className="order-summary-container">
