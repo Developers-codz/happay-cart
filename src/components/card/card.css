@@ -39,3 +39,11 @@
     background-color: var(--color-light);
     cursor: pointer;
 }
+
+
+.product-qty-handler{
+  margin:1rem 0;
+}
+.qty-product-input{
+  width:100%;
+}

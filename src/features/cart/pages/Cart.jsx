@@ -1,6 +1,7 @@
 import React from "react";
 import "./cart.css";
 import { Link } from "react-router-dom";
+import { QtyButton } from "../../../components";
 
 export const Cart = () => {
   return (
@@ -20,11 +21,7 @@ export const Cart = () => {
             <li className="decor-none distributed cart-product-card">
               <div className="sno">1</div>
               <div className="product-name">Food Cart</div>
-              <div className="qty-wrapper centered">
-                <button className="qty-btn-minus qty-btn pointer">-</button>
-                <input type="text" className="qty-input" disabled />
-                <button className="qty-btn-plus qty-btn pointer">+</button>
-              </div>
+              <QtyButton />
             </li>
           </ul>
         </div>
