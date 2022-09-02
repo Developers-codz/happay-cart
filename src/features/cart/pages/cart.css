@@ -2,6 +2,7 @@
   margin: 2rem 7rem;
 }
 
+
 .home-link {
   text-decoration: none;
   color: black;
@@ -22,6 +23,7 @@
   width: 55%;
   min-height: 10rem;
   border-radius: 4px;
+  position: relative;
  
 }
 .cart-product-card {
@@ -35,6 +37,7 @@
   align-items: center;
   width: 100%;
 }
+
 
 .s-no {
   padding-left: 2.5rem;
@@ -55,18 +58,23 @@
   height: 2.5rem;
   font-weight: 600;
   color: white;
-  background-color: rgb(36, 34, 34);
+  background-color: rgb(88, 86, 86);
   font-size: 1.3rem;
   border: none;
+
 }
 .qty-btn-plus {
   padding: 0 0.7rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .qty-btn-minus {
   padding: 0 0.8rem;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 .qty-input {
-  padding: 0.65rem 0;
+  padding: 0.72rem 0;
   text-align: center;
   font-weight: 600;
 }
@@ -83,9 +91,11 @@
   padding: 2rem;
   position: relative;
 }
+
 .order-head::after,
 .cart-product-head ::after,
-.tax-wrapper::after {
+.tax-wrapper::after,
+.cart-card-wrapper::after {
   content: "";
   position: absolute;
   right: 10px;
@@ -94,6 +104,10 @@
   height: 1px;
   width: 95%;
   border-bottom: 1px solid var(--color-grey);
+}
+.cart-card-wrapper::after {
+  top:50%;
+  border-bottom: 1px solid var(--color-grey-50);
 }
 .tax-wrapper::after {
   top:3.2rem;
@@ -106,6 +120,8 @@
   padding:1rem 0;
   font-size: 1.2rem;
   font-weight: 500;
+  justify-content: space-between;
+  margin:0 2rem;
 }
 .order-desc{
   position: relative;
@@ -134,6 +150,23 @@
 }
 .disc-price{
   color:var(--color-success);
+}
+.add-more-wrapper{
+  margin:1rem 3rem;
+  padding:2rem 0;
+  height:16.5rem;
+}
+.Add-more-link{
+  color:var(--color-primary);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.net-price{
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.btn-blue{
+  width:5rem
 }
 @media only screen and (max-width:1200px){
   .cart-container{

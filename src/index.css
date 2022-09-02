@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
 *{
   padding:0;
   margin:0;
@@ -11,4 +12,8 @@
   --color-grey:#888888;
   --color-grey-50:#e9e0e0;
   --color-success:rgb(7, 116, 7);
+  --sans: Tajawal, sans-serif;
+}
+html{
+  font-style: var(--sans);
 }

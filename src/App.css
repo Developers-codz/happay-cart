@@ -19,5 +19,8 @@
   list-style: none;
 }
 .self-justified{
-  justify-self: start;
+  align-self: start;
+}
+.bg-primary{
+  background-color: var(--color-primary) !important;
 }

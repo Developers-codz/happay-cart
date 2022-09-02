@@ -77,5 +77,6 @@
 }
 .qty-product-input{
   width:100%;
+  border:1px solid var(--color-primary);
 }
 

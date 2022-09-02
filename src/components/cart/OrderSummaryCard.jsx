@@ -1,6 +1,13 @@
 import React from 'react'
 
 export const OrderSummaryCard = ({cart}) => {
+  const discount = cart.reduce(
+    (acc, curr) =>
+      curr.original_price
+        ? (acc += curr.original_price - curr.final_price)
+        : acc,
+    0
+  )
   return (
     <div className="order-summary-container">
               <h2 className="order-head">Price Details</h2>
@@ -16,22 +23,16 @@ export const OrderSummaryCard = ({cart}) => {
                   </li>
                 ))}
               </ul>
-              <div className="distributed  price-list">
-                <div className="price-desc self-justified">Total Savings</div>
+             
+                {discount > 0 &&  <div className="distributed  price-list"><div className="price-desc self-justified">Total Savings</div>
                 <div className="total-price disc-price">
                  - ${" "}
-                  {cart.reduce(
-                    (acc, curr) =>
-                      curr.original_price
-                        ? (acc += curr.original_price - curr.final_price)
-                        : acc,
-                    0
-                  )}
+                  {discount}
                   .00
-                </div>
-              </div>
+                </div></div>}
+              
               <div className="distributed  price-list">
-                <div className="price-desc self-justified">Delivery Charge</div>
+                <div className="price-desc">Delivery Charge</div>
                 <div className="total-price">$ 5.00</div>
               </div>
               <div className="distributed  price-list tax-wrapper">

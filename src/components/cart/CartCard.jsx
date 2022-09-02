@@ -1,5 +1,6 @@
 import React from 'react'
 import {QtyButton} from "../button/QtyButton"
+import { Link } from 'react-router-dom'
 
 export const CartCard = ({cart}) => {
   return (
@@ -9,7 +10,7 @@ export const CartCard = ({cart}) => {
                 <div className="cart-items-head">ITEMS</div>
                 <div className="qty-head">QTY</div>
               </div>
-              <ul>
+              <ul className="cart-card-wrapper">
                 {cart?.map((item) => (
                   <li
                     className="decor-none distributed cart-product-card"
@@ -28,6 +29,9 @@ export const CartCard = ({cart}) => {
                   </li>
                 ))}
               </ul>
+              <div className='add-more-wrapper'>
+                  <Link to="/" className="Add-more-link">+ Add more items</Link>
+              </div>
             </div>
   )
 }
