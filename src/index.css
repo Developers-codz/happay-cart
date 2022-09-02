@@ -14,6 +14,6 @@
   --color-success:rgb(7, 116, 7);
   --sans: Tajawal, sans-serif;
 }
-html{
+body{
   font-style: var(--sans);
 }

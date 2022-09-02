@@ -6,6 +6,7 @@
 .distributed{
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .pointer{
   cursor:pointer;

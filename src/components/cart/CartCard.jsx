@@ -11,12 +11,12 @@ export const CartCard = ({cart}) => {
                 <div className="qty-head">QTY</div>
               </div>
               <ul className="cart-card-wrapper">
-                {cart?.map((item) => (
+                {cart?.map((item,i) => (
                   <li
                     className="decor-none distributed cart-product-card"
-                    key={item.id}
+                    key={i}
                   >
-                    <div className="sno">{item.id}</div>
+                    <div className="sno">{i+1}</div>
                     <div className="product-name">
                       {item.name
                         .split(" ")
