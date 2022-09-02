@@ -10,7 +10,7 @@ export const CartCard = ({cart}) => {
                 <div className="qty-head">QTY</div>
               </div>
               <ul>
-                {cart.map((item) => (
+                {cart?.map((item) => (
                   <li
                     className="decor-none distributed cart-product-card"
                     key={item.id}

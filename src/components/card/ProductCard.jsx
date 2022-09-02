@@ -7,15 +7,17 @@ import { QtyButton } from "../button/QtyButton";
 export const ProductCard = ({ item }) => {
   const dispatch = useDispatch();
   const { cart } = useSelector((store) => store.cart);
-  const getCurrentItem = (item) => cart.find((it) => it.name === item.name);
-
+  const getCurrentItem = (item) => cart?.find((it) => it.name === item.name);
+ 
   return (
     <div className="card">
       <div className="img-wrapper">
         <img className="card-img" src={item.img_url} alt="" />
         {item?.original_price && (
           <div className="disc-ribbon">
-            {((item.original_price - item.final_price) / item.original_price)*100}% OFF
+            {((item.original_price - item.final_price) / item.original_price) *
+              100}
+            % OFF
             <div className="triangle"></div>
           </div>
         )}

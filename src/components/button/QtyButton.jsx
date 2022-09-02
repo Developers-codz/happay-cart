@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import {
   qtyIncreaseHandler,
   qtyDecreaseHandler,
-  removeFromCartHandler
+  removeFromCartHandler,
 } from "../../features/cart/cartSlice";
 
 export const QtyButton = ({ props, item }) => {

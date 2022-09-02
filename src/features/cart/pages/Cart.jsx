@@ -2,11 +2,18 @@ import React from "react";
 import "./cart.css";
 import { Link } from "react-router-dom";
 import { CartCard, OrderSummaryCard } from "../../../components";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import { LeftArrowIcon } from "../../../assets";
+
+
+
 
 export const Cart = () => {
   const { cart } = useSelector((store) => store.cart);
+  const dispatch = useDispatch();
+
+
+
   return (
     <main className="cart-container">
       <Link to="/" className="home-link ">
@@ -17,8 +24,8 @@ export const Cart = () => {
       <div className="centered cards-wrapper ">
         {cart.length > 0 ? (
           <>
-           <CartCard cart={cart} />
-           <OrderSummaryCard cart={cart} />
+            <CartCard cart={cart} />
+            <OrderSummaryCard cart={cart} />
           </>
         ) : (
           <h1>Cart is Empty :(</h1>
