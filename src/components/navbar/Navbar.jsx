@@ -2,10 +2,12 @@ import React from "react";
 import { Cart } from "../../assets";
 import "./navbar.css";
 import { Link,useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 
 export const Navbar = () => {
-  const location =useLocation()
+  const location =useLocation();
+  const {cart} = useSelector(store => store.cart)
  
   return (
     <nav className={ `navbar ${location.pathname === "/order-summary" && "bottom-shadow"}`}>
@@ -20,7 +22,7 @@ export const Navbar = () => {
       <ul className="centered nav-links">
        {location.pathname === "/" && ( <Link  to="/order-summary" className="cart-wrapper pointer">
         <Cart />
-        <div className="qty-badge">0</div>
+        <div className="qty-badge">{cart.length}</div>
         </Link>)}
         <li><img src="https://images.unsplash.com/photo-1521227889351-bf6f5b2e4e37?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YnJvd24lMjB3b21hbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" className="profile-img" /></li>
       </ul>
