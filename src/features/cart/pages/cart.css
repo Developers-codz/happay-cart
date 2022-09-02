@@ -1,6 +1,7 @@
 .cart-container {
   margin: 2rem 7rem;
 }
+
 .home-link {
   text-decoration: none;
   color: black;
@@ -47,7 +48,9 @@
   padding: 0 5rem;
 }
 
-
+.product-name{
+  white-space: nowrap;
+}
 .qty-btn {
   height: 2.5rem;
   font-weight: 600;
@@ -107,7 +110,6 @@
 .order-desc{
   position: relative;
   margin:1rem 0;
-
 }
 .order-desc::after{
   content: "";
@@ -128,5 +130,34 @@
   border-radius: 5px;
   font-size: 1.2rem;
   font-weight: 600;
+}
+@media only screen and (max-width:1200px){
+  .cart-container{
+    margin:2rem;
+  } 
+  .cards-wrapper {
+    flex-direction: column-reverse;
+  }
+  .cart-product-container,.order-summary-container{
+    width:100%;
+    margin:1rem 0
+  }
+  
+  
+}
+@media only screen and (max-width:600px){
+  .qty-input {
+    width:20%;
+  }  
+  .s-no {
+    padding-left: 0.2rem;
+  } 
+  .cart-product-card{
+    justify-content: center;
+  }
+  .product-name{
+    margin-left:3rem;
+  }
+
 }
 
