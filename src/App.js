@@ -5,11 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Cart, ProductsListing } from "./features";
 import { useEffect } from "react";
 import {
-  addToCartHandler,
   getcartItems,
-  qtyDecreaseHandler,
-  qtyIncreaseHandler,
-  removeFromCartHandler,
 } from "./features/cart/cartSlice";
 
 function App() {
@@ -17,13 +13,11 @@ function App() {
   const { cart } = useSelector((store) => store.cart);
   useEffect(()=>{
     let cart =  JSON.parse(localStorage.getItem("cart"));
-    console.log(cart)
     dispatch(getcartItems(cart));
 },[])
 
   useEffect(() => {
     if(JSON.parse(localStorage.getItem("cart")) === null) {
-      console.log("i run")
       localStorage.setItem("cart", JSON.stringify(cart))
     } 
   }, []);

@@ -8,18 +8,18 @@ export const OrderSummaryCard = ({cart}) => {
                 {cart.map((item) => (
                   <li className="distributed price-list">
                     <div className="price-desc">
-                      {item.qty}* $ {item.final_price}.00
+                      {item.qty} X $ {item.final_price}.00
                     </div>
                     <div className="total-price">
-                      $ {item.qty * item.final_price}.00
+                      $ {item.qty*item.final_price}.00
                     </div>
                   </li>
                 ))}
               </ul>
               <div className="distributed  price-list">
                 <div className="price-desc self-justified">Total Savings</div>
-                <div className="total-price">
-                  ${" "}
+                <div className="total-price disc-price">
+                 - ${" "}
                   {cart.reduce(
                     (acc, curr) =>
                       curr.original_price
