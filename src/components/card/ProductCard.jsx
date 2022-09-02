@@ -7,11 +7,19 @@ import { QtyButton } from "../button/QtyButton";
 export const ProductCard = ({ item }) => {
   const dispatch = useDispatch();
   const { cart } = useSelector((store) => store.cart);
-  const getCurrentItem = (item) => cart.find(it => it.name === item.name);
+  const getCurrentItem = (item) => cart.find((it) => it.name === item.name);
 
   return (
     <div className="card">
-      <img className="card-img" src={item.img_url} alt="" />
+      <div className="img-wrapper">
+        <img className="card-img" src={item.img_url} alt="" />
+        {item?.original_price && (
+          <div className="disc-ribbon">
+            {((item.original_price - item.final_price) / item.original_price)*100}% OFF
+            <div className="triangle"></div>
+          </div>
+        )}
+      </div>
       <div className="card-header">
         <div className="card-name">
           {item.name
@@ -29,12 +37,16 @@ export const ProductCard = ({ item }) => {
         </div>
       </div>
       <div className="card-desc">{item.description}</div>
-     {getCurrentItem(item)?.qty > 0 ?<QtyButton props={"product"} item={getCurrentItem(item)} /> : <button
-        className="card-btn"
-        onClick={() => dispatch(addToCartHandler({ ...item, qty: 1 }))}
-      >
-        Add To Cart
-      </button>}
+      {getCurrentItem(item)?.qty > 0 ? (
+        <QtyButton props={"product"} item={getCurrentItem(item)} />
+      ) : (
+        <button
+          className="card-btn"
+          onClick={() => dispatch(addToCartHandler({ ...item, qty: 1 }))}
+        >
+          Add To Cart
+        </button>
+      )}
     </div>
   );
 };
