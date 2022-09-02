@@ -1,5 +1,5 @@
 .product-wrapper{
-    padding:3rem ;
+    padding:3rem;
 }
 
 .cards-container{
@@ -7,4 +7,18 @@
     justify-content: start;
     padding:5rem 0 0 0;
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width:1360px){
+    .product-wrapper{
+        padding:2rem;
+    }
+    .cards-container{
+        justify-content: center;
+    }
+}
+@media only screen and (max-width:800px){
+    .product-wrapper{
+        padding:2rem 0rem;
+    }
 }

@@ -7,7 +7,6 @@ export const ProductsListing = () => {
   return (
     <main className="product-wrapper">
       <ProductHeading />
-     
         <ul className="cards-container">
           {cardData.map((ele, i) => (
             <ProductCard item={ele} key={i} />
